@@ -1,31 +1,33 @@
-package com.datatypesandvariables;
+package com.thiskeyword;
 
 public class Product {
-		int prodId;
-		String prodName;
-		static double price = 10000;
-		void setData(int a, String b)
-		{
-			prodId = a;
-			prodName = b;
-		}
-		
-		void showInfo()
-		{
-			System.out.println("Product details:");
-			System.out.println("Product id is: "+prodId);
-			System.out.println("Product name is: "+prodName);
-			System.out.println("Price value is : "+price);
-		}
-		
+
+	String tvModel;//fields
+	int mfgYear;
+	int tvPrice;
+	int screenSize;
+	// app action or behaviour
+	void setDetails(String tvModel,int mfgYear,int tvPrice,int screenSize)
+	{
+	this.tvModel = tvModel;
+	this.mfgYear = mfgYear;
+	this.tvPrice = tvPrice;
+	this.screenSize = screenSize;
+	}
+	void allInfo()
+	{
+	System.out.println("tv model is:"+tvModel);
+	System.out.println("tv mfgYear is:"+mfgYear);
+	System.out.println("tv price is:"+tvPrice);
+	System.out.println("tv size is:"+screenSize+"inches");
+	}
+	
+	
+	
 	public static void main(String[] args) {
-		Product prod = new Product();
-		prod.setData(123,"Realme");
-		prod.showInfo();
-		prod.setData(234,"LG");
-		prod.showInfo();
-		
-		
+		Product p = new Product();
+		p.setDetails("LG LED", 2020,30000, 21);
+	    p.allInfo();
 	}
 
 }
